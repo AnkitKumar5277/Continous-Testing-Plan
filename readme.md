@@ -12,7 +12,18 @@ Continuous Testing means **automatically running API tests whenever code changes
 1. Push Postman tests to GitHub  
 2. Jenkins pulls the code  
 3. Newman runs API tests  
-4. HTML report is generated  
+4. HTML report is generated
+
+Jenkins:
+
+Pipeline -> Pipeline script form SCM -> Repo URL
+Branch to Build -> */main
+
+Create Jenkinsfile -> give ss of github project folder + this:
+
+```
+
+```
 
 ## 📊 Test Report
 After Jenkins build:
