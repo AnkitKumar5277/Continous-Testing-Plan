@@ -17,7 +17,7 @@ Continuous Testing means **automatically running API tests whenever code changes
 # Jenkins Setup:
 - Pipeline -> Pipeline script form SCM -> Repo URL
 - Branch to Build -> */main
-- Create Jenkinsfile -> give ss of github project folder + this:
+- Create Jenkinsfile -> 🖼️ give screenshot of full opened github project folder structure + this code to llm:
 
 ```
 pipeline {
