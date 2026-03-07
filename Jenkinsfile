@@ -1,18 +1,22 @@
 pipeline {
     agent any
 
+    tools {
+        allure 'Allure'
+    }
+
     stages {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: '<your-repo-url>'
+                git branch: 'main', url: 'https://github.com/AnkitKumar5277/Continuous-Testing-Plan.git'
             }
         }
 
         stage('Run Postman Tests') {
             steps {
                 bat '''
-                newman run postman/Continuous-Testing.postman_collection.json ^
+                newman run postman/collection.json ^
                 -e postman/environment.json ^
                 -r allure ^
                 --reporter-allure-export allure-results
@@ -25,7 +29,6 @@ pipeline {
         always {
             allure([
                 includeProperties: false,
-                jdk: '',
                 results: [[path: 'allure-results']]
             ])
         }
