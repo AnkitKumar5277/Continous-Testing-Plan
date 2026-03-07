@@ -9,7 +9,15 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/AnkitKumar5277/Continous-Testing-Plan.git'
+                git branch: 'main',
+                url: 'https://github.com/AnkitKumar5277/Continous-Testing-Plan.git'
+            }
+        }
+
+        stage('Check Files') {
+            steps {
+                bat 'dir'
+                bat 'dir postman'
             }
         }
 
@@ -28,7 +36,6 @@ pipeline {
     post {
         always {
             allure([
-                includeProperties: false,
                 results: [[path: 'allure-results']]
             ])
         }
