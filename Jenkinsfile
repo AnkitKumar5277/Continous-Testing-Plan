@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/AnkitKumar5277/Continuous-Testing-Plan.git'
+                git branch: 'main', url: 'https://github.com/AnkitKumar5277/Continous-Testing-Plan.git'
             }
         }
 
