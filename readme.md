@@ -14,6 +14,18 @@ Continuous Testing means **automatically running API tests whenever code changes
 3. Newman runs API tests  
 4. HTML report is generated
 
+# Structure  
+Continuous-Testing-Plan
+
+├── allure-results
+│   └── readme.md
+│
+├── postman
+│   ├── collection.json
+│   └── environment.json
+│
+└── Jenkinsfile
+
 # Jenkins Setup:
 - Pipeline -> Pipeline script form SCM -> Repo URL
 - Branch to Build -> */main
