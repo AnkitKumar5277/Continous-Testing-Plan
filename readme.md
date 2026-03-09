@@ -16,7 +16,7 @@ Continuous Testing means **automatically running API tests whenever code changes
 
 # Structure  
 Continuous-Testing-Plan
-
+```
 ├── allure-results
 │   └── readme.md
 │
@@ -25,6 +25,7 @@ Continuous-Testing-Plan
 │   └── environment.json
 │
 └── Jenkinsfile
+```
 
 # Jenkins Setup:
 - Pipeline -> Pipeline script form SCM -> Repo URL
